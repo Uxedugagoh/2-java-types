@@ -3,10 +3,19 @@ package com.example.task07;
 public class Task07 {
 
     public static int solution(int n, int m, int k) {
+        int oneSide = getNumberOfTentSideInAreaSide(n, k);
+        int twoSide = getNumberOfTentSideInAreaSide(m, k);
 
-        // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
+        return oneSide * twoSide;
+    }
 
-        return 0;
+    private static int getNumberOfTentSideInAreaSide(int n, int k) {
+        int count = 0;
+        while (n >= k) {
+            count += 1;
+            n -= k;
+        }
+        return count;
     }
 
     public static void main(String[] args) {

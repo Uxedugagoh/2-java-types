@@ -12,7 +12,7 @@ public class Tests {
 
     @Test
     public void test() throws Exception {
-        check(1, 1, 1);
+        check(Integer.MAX_VALUE, 1, 1);
         check(51, 49, 3);
         check(412, 844, 4);
         check(-111, -222, 3);
@@ -22,6 +22,7 @@ public class Tests {
         check(10000001, -2, 7);
         check(1000000000, 1000000000, 10);
         check(-1000000000, -1000000000, 10);
+        check(-1000000000, 1000000000, 1);
         check(-1000000000, 1000000000, 1);
     }
 
